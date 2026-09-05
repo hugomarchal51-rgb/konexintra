@@ -181,7 +181,7 @@ export function OperatorView({ onAction }: { onAction: (action: OperatorAction) 
       <div className="voice-stage">
         <div className="voice-copy">
           <span className="eyebrow">VOTRE ASSISTANT VOCAL</span>
-          <h1>{subtitle || '\u00A0'}</h1>
+          <h1>{subtitle || ' '}</h1>
           {transcript && mode !== 'speaking' && <p className="heard-text">« {transcript} »</p>}
           {aiResponse && mode === 'speaking' && <p className="ai-response-text">{aiResponse}</p>}
         </div>
@@ -210,7 +210,7 @@ export function OperatorView({ onAction }: { onAction: (action: OperatorAction) 
           {mode === 'speaking' && <button className="stop-voice" onClick={stopSession}>Arrêter</button>}
         </div>
         <div className="voice-hint">
-          <Mic size={14} /> {mode === 'listening' ? 'Parlez naturellement, je m\u2019occupe du reste.' : 'Votre voix reste privée et n\u2019est pas enregistrée.'}
+          <Mic size={14} /> {mode === 'listening' ? 'Parlez naturellement, je m’occupe du reste.' : 'Votre voix reste privée et n’est pas enregistrée.'}
         </div>
       </div>
     </div>
